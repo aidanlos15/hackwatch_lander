@@ -7,39 +7,45 @@ const rows = [
   ["Dashboard & PR path", "Exercised in controlled demos", "Backend reusable; live proof pending"],
 ];
 
+const faqs = [
+  ["Does it fix production automatically?", "No. Proposals and GitHub actions are review and permission gated."],
+  ["Does it need AI to detect attacks?", "No. Local detectors and source analysis run without external AI."],
+  ["Does a repeated attack burn model calls?", "No. Durable identity and cooldowns keep one vulnerability to one analysis."],
+];
+
 export default function Coverage() {
   return (
-    <section id="coverage" className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-        <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#38BDF8]">05 / Honest coverage</p>
-        <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-[#F8FAFC] md:text-6xl">What's live, and what's next.</h2>
+    <section id="coverage" className="border-t border-white/[0.06] px-8 py-32">
+      <div className="mx-auto max-w-5xl">
+        <div className="flex items-baseline gap-4">
+          <span className="font-mono text-[11px] text-neutral-600">04</span>
+          <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">What's live, and what's next.</h2>
+        </div>
         <div className="mt-12 overflow-x-auto">
           <table className="w-full min-w-[640px] text-left">
             <thead>
-              <tr className="font-mono text-xs uppercase tracking-widest text-[#38BDF8]">
-                <th className="py-4 pr-6">Capability</th><th className="py-4 pr-6">Native Linux / Nginx</th><th className="py-4">Serverless pilot</th>
+              <tr className="font-mono text-[11px] uppercase tracking-widest text-neutral-500">
+                <th className="py-4 pr-6 font-normal">Capability</th>
+                <th className="py-4 pr-6 font-normal">Native Linux / Nginx</th>
+                <th className="py-4 font-normal">Serverless pilot</th>
               </tr>
             </thead>
             <tbody>
               {rows.map(([a, b, c]) => (
-                <tr key={a} className="border-t border-white/10 align-top">
-                  <td className="py-5 pr-6 font-semibold text-[#F8FAFC]">{a}</td>
-                  <td className="py-5 pr-6 text-[#94A3B8]">{b}</td>
-                  <td className="py-5 text-[#94A3B8]">{c}</td>
+                <tr key={a} className="border-t border-white/[0.06] align-top">
+                  <td className="py-5 pr-6 text-sm text-white">{a}</td>
+                  <td className="py-5 pr-6 text-sm text-neutral-400">{b}</td>
+                  <td className="py-5 text-sm text-neutral-400">{c}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {[
-            ["Does it fix production automatically?", "No. Proposals and GitHub actions are review and permission gated."],
-            ["Does it need AI to detect attacks?", "No. Local detectors and source analysis run without external AI."],
-            ["Does a repeated attack burn model calls?", "No. Durable identity and cooldowns keep one vulnerability to one analysis."],
-          ].map(([q, a]) => (
-            <div key={q} className="border border-white/10 bg-[#0F172A]/60 p-6">
-              <h3 className="font-semibold text-[#F8FAFC]">{q}</h3>
-              <p className="mt-2 text-[#94A3B8]">{a}</p>
+        <div className="mt-16 grid gap-px bg-white/[0.06] md:grid-cols-3">
+          {faqs.map(([q, a]) => (
+            <div key={q} className="bg-[#0A0A0B] p-8">
+              <h3 className="text-sm text-white">{q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-500">{a}</p>
             </div>
           ))}
         </div>

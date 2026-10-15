@@ -12,14 +12,13 @@ import Footer from "@/components/hackwatch/Footer";
 export default function Home() {
   return (
     <div
-      className="relative min-h-screen scroll-smooth bg-[#020617] font-sans text-[#F8FAFC]"
+      className="relative min-h-screen scroll-smooth bg-[#0A0A0B] font-sans text-neutral-200"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px)",
-        backgroundSize: "64px 64px",
+          "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
+        backgroundSize: "80px 80px",
       }}
     >
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 h-px animate-[scan_8s_linear_infinite] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent" />
       <Nav />
       <Hero />
       <Networks />

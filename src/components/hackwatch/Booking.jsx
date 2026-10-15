@@ -14,22 +14,24 @@ export default function Booking() {
     setDone(true);
   };
 
-  const input = "w-full border border-white/15 bg-[#020617] px-4 py-3 font-mono text-sm text-[#F8FAFC] outline-none focus:border-[#38BDF8]";
+  const input = "w-full border-b border-white/15 bg-transparent px-0 py-3 font-mono text-sm text-white placeholder-neutral-600 outline-none focus:border-white";
 
   return (
-    <section id="demo" className="px-6 py-32">
+    <section id="demo" className="border-t border-white/[0.06] px-8 py-32">
       <div className="mx-auto max-w-3xl">
-        <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#38BDF8]">06 / Perimeter setup</p>
-        <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#F8FAFC] md:text-6xl">Book a demo.</h2>
-        <div className="mt-10 border border-white/10 bg-[#0F172A] p-8">
+        <div className="flex items-baseline gap-4">
+          <span className="font-mono text-[11px] text-neutral-600">05</span>
+          <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">Book a demo.</h2>
+        </div>
+        <div className="mt-12">
           {done ? (
-            <p className="font-mono text-[#38BDF8]">&gt; Request received. We'll be in touch shortly.</p>
+            <p className="font-mono text-sm text-neutral-300">&gt; Request received. We'll be in touch shortly.</p>
           ) : (
-            <form onSubmit={submit} className="space-y-6">
+            <form onSubmit={submit} className="space-y-8">
               <input required className={input} placeholder="> your name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
               <input required type="email" className={input} placeholder="> work email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-              <button disabled={busy} className="w-full bg-[#38BDF8] py-4 font-mono text-sm font-bold uppercase tracking-widest text-[#020617] transition-shadow hover:shadow-[0_0_40px_rgba(56,189,248,0.5)] disabled:opacity-50">
-                {busy ? "Authorizing..." : "Authorize demo"}
+              <button disabled={busy} className="bg-white px-8 py-3 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-[#0A0A0B] transition-opacity hover:opacity-80 disabled:opacity-50">
+                {busy ? "Authorizing..." : "Authorize demo →"}
               </button>
             </form>
           )}

@@ -1,41 +1,45 @@
 import React from "react";
-import { Eye, Ghost, ShieldCheck } from "lucide-react";
 
 const modes = [
-  { icon: Eye, name: "Observe", blocks: "Never blocks", body: "Inspect supported evidence and investigate findings." },
-  { icon: Ghost, name: "Shadow", blocks: "Never blocks", body: "Calculate policy decisions and record what would have been blocked." },
-  { icon: ShieldCheck, name: "Protect", blocks: "Blocks when eligible", body: "Enforce explicit request contracts and managed high-confidence rules at the Nginx boundary." },
+  { name: "Observe", blocks: "Never blocks", body: "Inspect supported evidence and investigate findings." },
+  { name: "Shadow", blocks: "Never blocks", body: "Calculate policy decisions and record what would have been blocked." },
+  { name: "Protect", blocks: "Blocks when eligible", body: "Enforce explicit request contracts and managed high-confidence rules at the Nginx boundary." },
 ];
 
 const roles = ["Owner", "Admin", "Security analyst", "Developer", "Viewer"];
 
 export default function Protection() {
   return (
-    <section id="protection" className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-        <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#38BDF8]">04 / Runtime enforcement</p>
-        <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-[#F8FAFC] md:text-6xl">Observe. Shadow. Then protect.</h2>
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {modes.map((m, i) => (
-            <div key={m.name} className={`border p-8 ${i === 2 ? "border-[#38BDF8]/60 bg-[#38BDF8]/5" : "border-white/10 bg-[#0F172A]/60"}`}>
-              <m.icon className="h-8 w-8 text-[#38BDF8]" />
-              <h3 className="mt-6 text-2xl font-semibold text-[#F8FAFC]">{m.name}</h3>
-              <p className="mt-1 font-mono text-xs uppercase tracking-widest text-[#F472B6]">{m.blocks}</p>
-              <p className="mt-4 text-[#94A3B8]">{m.body}</p>
+    <section id="protection" className="border-t border-white/[0.06] px-8 py-32">
+      <div className="mx-auto max-w-5xl">
+        <div className="flex items-baseline gap-4">
+          <span className="font-mono text-[11px] text-neutral-600">03</span>
+          <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">Observe. Shadow. Then protect.</h2>
+        </div>
+        <div className="mt-16 border-y border-white/[0.06]">
+          {modes.map((m) => (
+            <div key={m.name} className="flex items-start justify-between gap-8 border-b border-white/[0.06] py-6 last:border-0">
+              <div>
+                <h3 className="text-lg text-white">{m.name}</h3>
+                <p className="mt-1 max-w-md text-sm leading-relaxed text-neutral-500">{m.body}</p>
+              </div>
+              <span className="whitespace-nowrap font-mono text-[11px] uppercase tracking-widest text-neutral-400">{m.blocks}</span>
             </div>
           ))}
         </div>
-        <div className="mt-6 border border-[#F472B6]/30 bg-[#F472B6]/5 p-6 text-[#94A3B8]">
-          <strong className="text-[#F8FAFC]">A deliberate trade-off.</strong> Local decision failures fail open to keep your app available. HackWatch is not a universal WAF or a guarantee that every attack is stopped.
-        </div>
+        <p className="mt-8 border-l border-white/20 pl-4 text-sm leading-relaxed text-neutral-500">
+          <span className="text-neutral-300">A deliberate trade-off.</span> Local decision failures fail open to keep your app available. HackWatch is not a universal WAF or a guarantee that every attack is stopped.
+        </p>
         <div className="mt-24 grid gap-12 md:grid-cols-2">
           <div>
-            <h3 className="text-3xl font-bold text-[#F8FAFC]">Least privilege, by design</h3>
-            <p className="mt-4 text-[#94A3B8]">People and agents use separate identities. Agents enroll with expiring single-use tokens and signed requests. Raw request bodies are discarded by default and sensitive data is redacted before it is stored, sent or shown to a model.</p>
+            <h3 className="text-2xl font-medium tracking-tight text-white">Least privilege, by design</h3>
+            <p className="mt-4 text-sm leading-relaxed text-neutral-400">
+              People and agents use separate identities. Agents enroll with expiring single-use tokens and signed requests. Raw request bodies are discarded by default and sensitive data is redacted before it is stored, sent or shown to a model.
+            </p>
           </div>
-          <div className="flex flex-wrap content-start gap-3">
+          <div className="flex flex-wrap content-start gap-2">
             {roles.map((r) => (
-              <span key={r} className="border border-white/15 px-4 py-2 font-mono text-xs uppercase tracking-widest text-[#F8FAFC]">{r}</span>
+              <span key={r} className="border border-white/15 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-neutral-400">{r}</span>
             ))}
           </div>
         </div>
