@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { base44 } from "@/api/base44Client";
-import { Slider } from "@/components/ui/slider";
-
-const envs = ["Cloud", "Linux / Nginx", "Serverless", "Enterprise", "IoT / Edge"];
 
 export default function Booking() {
-  const [form, setForm] = useState({ name: "", email: "", environment: "Cloud" });
-  const [apps, setApps] = useState([10]);
+  const [form, setForm] = useState({ name: "", email: "" });
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
     setBusy(true);
-    await base44.entities.DemoRequest.create({ ...form, applications: apps[0] });
+    await base44.entities.DemoRequest.create(form);
     setBusy(false);
     setDone(true);
   };
@@ -32,15 +28,6 @@ export default function Booking() {
             <form onSubmit={submit} className="space-y-6">
               <input required className={input} placeholder="> your name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
               <input required type="email" className={input} placeholder="> work email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-              <div className="flex flex-wrap gap-2">
-                {envs.map((x) => (
-                  <button type="button" key={x} onClick={() => setForm({ ...form, environment: x })} className={`border px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors ${form.environment === x ? "border-[#38BDF8] bg-[#38BDF8] text-[#020617]" : "border-white/15 text-[#94A3B8] hover:border-[#38BDF8]"}`}>{x}</button>
-                ))}
-              </div>
-              <div>
-                <div className="mb-3 flex justify-between font-mono text-xs uppercase tracking-widest text-[#94A3B8]"><span>Applications to watch</span><span className="text-[#38BDF8]">{apps[0]}</span></div>
-                <Slider min={1} max={200} step={1} value={apps} onValueChange={setApps} />
-              </div>
               <button disabled={busy} className="w-full bg-[#38BDF8] py-4 font-mono text-sm font-bold uppercase tracking-widest text-[#020617] transition-shadow hover:shadow-[0_0_40px_rgba(56,189,248,0.5)] disabled:opacity-50">
                 {busy ? "Authorizing..." : "Authorize demo"}
               </button>
