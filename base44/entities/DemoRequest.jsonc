@@ -1,0 +1,29 @@
+{
+  "name": "DemoRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "Cloud",
+        "Linux / Nginx",
+        "Serverless",
+        "Enterprise",
+        "IoT / Edge"
+      ]
+    },
+    "applications": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}
