@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "@/components/ui/image";
 
 const links = [
   ["Networks", "#networks"],
@@ -12,7 +11,7 @@ export default function Nav() {
   return (
     <header className="hw-focus sticky top-6 z-50 mx-auto mt-6 flex max-w-[1100px] items-center justify-between rounded-[18px] border border-slate-200 bg-white/80 px-7 py-3.5 shadow-[0_8px_32px_rgba(15,23,42,0.08)] backdrop-blur-md">
       <a href="#top" className="flex items-center">
-        <Image src="https://media.base44.com/images/public/6ad1475af0db89ea8a403727/22d8ea749_hackwatch_logo.png" alt="HackWatch" fittingType="fit" className="h-9 w-auto" />
+        <img src="https://media.base44.com/images/public/6ad1475af0db89ea8a403727/22d8ea749_hackwatch_logo.png" alt="HackWatch" className="h-9 w-auto" />
       </a>
       <nav className="hidden gap-[34px] md:flex">
         {links.map(([l, h]) => (
