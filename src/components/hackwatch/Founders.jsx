@@ -14,7 +14,9 @@ export default function Founders() {
         <div className="mx-auto mt-12 grid max-w-[820px] grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
           {founders.map((founder) => (
             <article key={founder.name} className="text-center">
-              <Image src={founder.image} alt={founder.name} fittingType="fit" className="mx-auto aspect-square w-60 overflow-hidden rounded-full border border-border bg-card shadow-xl md:w-64" />
+              <div className="mx-auto aspect-square w-60 overflow-hidden rounded-full border border-border bg-card shadow-xl md:w-64">
+                <Image src={founder.image} alt={founder.name} fittingType="fit" className={founder.region === "North America" ? "h-full w-full scale-[0.9]" : "h-full w-full"} />
+              </div>
               <h3 className="mt-7 font-heading text-2xl font-semibold tracking-tight text-foreground md:text-3xl">{founder.name}</h3>
               <p className="mt-3 font-mono text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">Co-founder · {founder.region}</p>
             </article>
