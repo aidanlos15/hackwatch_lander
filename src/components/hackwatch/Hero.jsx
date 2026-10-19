@@ -13,9 +13,9 @@ export default function Hero() {
         </div>
         <h1 className="mx-auto mt-8 max-w-[860px] text-[40px] font-semibold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-6xl md:text-[72px]">
           {words.map((w, i) => (
-            <span key={w} className="inline-block animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: `${0.1 + i * 0.1}s` }}>{w} </span>
+            <span key={w} className="inline-block animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: `${0.1 + i * 0.1}s` }}>{w}{"\u00a0"}</span>
           ))}
-          <span className="inline-block bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: "0.5s" }}>code-level </span>
+          <span className="inline-block bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: "0.5s" }}>code-level{"\u00a0"}</span>
           <span className="inline-block bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: "0.6s" }}>fixes.</span>
         </h1>
         <p className="mx-auto mt-7 max-w-[560px] text-base leading-[1.7] text-slate-500 animate-[hw-up_0.8s_0.6s_ease_both] sm:text-[17px]">
