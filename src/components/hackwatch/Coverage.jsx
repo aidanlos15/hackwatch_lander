@@ -1,5 +1,7 @@
 import React from "react";
 
+const glass = "bg-white/[0.05] border border-white/[0.1] rounded-[24px] shadow-[0_10px_36px_rgba(0,0,0,0.3)] backdrop-blur-[16px] transition hover:shadow-[0_10px_40px_rgba(79,163,232,0.22)] hover:border-[#4FA3E8]/[0.35]";
+
 const rows = [
   ["GET & POST visibility", "Configured proxy/log coverage, bounded body parsing", "Selected fields in instrumented handlers"],
   ["Immediate blocking", "Protect mode with local rules", "On the roadmap"],
@@ -15,37 +17,37 @@ const faqs = [
 
 export default function Coverage() {
   return (
-    <section id="coverage" className="border-t border-white/[0.06] px-8 py-32">
-      <div className="mx-auto max-w-5xl">
+    <section id="coverage" className="relative z-10 px-10 pt-0">
+      <div className="mx-auto max-w-[1100px]">
         <div className="flex items-baseline gap-4">
-          <span className="font-mono text-[11px] text-neutral-600">04</span>
-          <h2 className="text-3xl font-medium tracking-tight text-white md:text-4xl">What's live, and what's next.</h2>
+          <span className="font-mono text-[13px] text-[#4FA3E8]">04</span>
+          <h2 className="text-3xl font-semibold tracking-[-0.01em] text-white md:text-[38px]">What's live, and what's next.</h2>
         </div>
-        <div className="mt-12 overflow-x-auto">
-          <table className="w-full min-w-[640px] text-left">
+        <div className={`${glass} mt-12 overflow-x-auto px-7 py-3`}>
+          <table className="w-full min-w-[640px] border-collapse text-left">
             <thead>
-              <tr className="font-mono text-[11px] uppercase tracking-widest text-neutral-500">
-                <th className="py-4 pr-6 font-normal">Capability</th>
-                <th className="py-4 pr-6 font-normal">Native Linux / Nginx</th>
-                <th className="py-4 font-normal">Serverless pilot</th>
+              <tr className="font-mono">
+                <th className="py-4 pr-4 text-[11px] font-normal uppercase tracking-[0.14em] text-[#94A3B8]">Capability</th>
+                <th className="py-4 pr-4 text-[11px] font-normal uppercase tracking-[0.14em] text-[#94A3B8]">Native Linux / Nginx</th>
+                <th className="py-4 text-[11px] font-normal uppercase tracking-[0.14em] text-[#94A3B8]">Serverless pilot</th>
               </tr>
             </thead>
             <tbody>
               {rows.map(([a, b, c]) => (
-                <tr key={a} className="border-t border-white/[0.06] align-top">
-                  <td className="py-5 pr-6 text-sm text-white">{a}</td>
-                  <td className="py-5 pr-6 text-sm text-neutral-400">{b}</td>
-                  <td className="py-5 text-sm text-neutral-400">{c}</td>
+                <tr key={a} className="align-top">
+                  <td className="border-t border-white/[0.08] py-5 pr-4 text-sm text-white">{a}</td>
+                  <td className="border-t border-white/[0.08] py-5 pr-4 text-sm leading-[1.6] text-[#94A3B8]">{b}</td>
+                  <td className="border-t border-white/[0.08] py-5 text-sm leading-[1.6] text-[#94A3B8]">{c}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div className="mt-16 grid gap-px bg-white/[0.06] md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {faqs.map(([q, a]) => (
-            <div key={q} className="bg-[#0A0A0B] p-8">
-              <h3 className="text-sm text-white">{q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-500">{a}</p>
+            <div key={q} className={`${glass} p-[26px]`}>
+              <h3 className="mb-2 text-[15px] font-semibold text-white">{q}</h3>
+              <p className="text-[15px] leading-[1.7] text-[#94A3B8]">{a}</p>
             </div>
           ))}
         </div>
