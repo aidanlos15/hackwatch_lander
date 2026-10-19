@@ -9,7 +9,7 @@ const links = [
 
 export default function Nav() {
   return (
-    <header className="hw-focus sticky top-0 z-50 mx-auto flex max-w-[1100px] items-center justify-between rounded-[18px] border border-slate-200 bg-white/80 px-7 py-3.5 shadow-[0_8px_32px_rgba(15,23,42,0.08)] backdrop-blur-md">
+    <header className="hw-focus sticky top-3 z-50 mx-auto mt-4 flex max-w-[1100px] items-center justify-between rounded-[18px] border border-slate-200 bg-white/80 px-7 py-3.5 shadow-[0_8px_32px_rgba(15,23,42,0.08)] backdrop-blur-md">
       <a href="#top" className="flex items-center">
         <img src="https://media.base44.com/images/public/6ad1475af0db89ea8a403727/2b94932bb_hackwatch_logo_transparent.png" alt="HackWatch" className="h-10 w-auto" />
       </a>
