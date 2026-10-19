@@ -1,7 +1,7 @@
 import React from "react";
 import { Server, Zap, Cloud, Network, Cpu } from "lucide-react";
 
-const glass = "bg-white/[0.05] border border-white/[0.1] rounded-[24px] shadow-[0_10px_36px_rgba(0,0,0,0.3)] backdrop-blur-[16px] transition hover:shadow-[0_10px_40px_rgba(79,163,232,0.22)] hover:border-[#4FA3E8]/[0.35]";
+const glass = "bg-white border border-slate-200 rounded-[24px] shadow-[0_10px_36px_rgba(15,23,42,0.08)] backdrop-blur-[16px] transition hover:shadow-[0_14px_44px_rgba(37,99,235,0.15)] hover:border-blue-300";
 
 const nets = [
   { name: "Linux / Nginx hosts", status: "Established", Icon: Server, body: "Native agent beside your app. Observe, shadow, then protect at the Nginx boundary. Exercised end to end in controlled Laravel demos." },
@@ -12,10 +12,10 @@ const nets = [
 ];
 
 const dot = {
-  Established: "bg-[#4FA3E8] shadow-[0_0_8px_#4FA3E8]",
-  Pilot: "bg-[#6E7CE8]",
-  "Adapter-based": "bg-[#94A3B8]",
-  Roadmap: "bg-[#475569]",
+  Established: "bg-blue-600 shadow-[0_0_8px_#3B82F6]",
+  Pilot: "bg-indigo-500",
+  "Adapter-based": "bg-slate-400",
+  Roadmap: "bg-slate-300",
 };
 
 export default function Networks() {
@@ -23,20 +23,20 @@ export default function Networks() {
     <section id="networks" className="relative z-10 px-10 pt-[96px]">
       <div className="mx-auto max-w-[1100px]">
         <div className="flex items-baseline gap-4">
-          <span className="font-mono text-[13px] text-[#4FA3E8]">01</span>
-          <h2 className="text-3xl font-semibold tracking-[-0.01em] text-white md:text-[38px]">One core. Every network plugs in.</h2>
+          <span className="font-mono text-[13px] text-blue-600">01</span>
+          <h2 className="text-3xl font-semibold tracking-[-0.01em] text-slate-900 md:text-[38px]">One core. Every network plugs in.</h2>
         </div>
-        <p className="mt-5 max-w-[620px] text-[15px] leading-[1.7] text-[#94A3B8]">The investigation engine is portable. Collection and enforcement adapters decide real coverage on each platform, and we label exactly where each one stands.</p>
+        <p className="mt-5 max-w-[620px] text-[15px] leading-[1.7] text-slate-500">The investigation engine is portable. Collection and enforcement adapters decide real coverage on each platform, and we label exactly where each one stands.</p>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {nets.map(({ name, status, Icon, body }) => (
             <div key={name} className={`${glass} flex flex-col p-7`}>
-              <div className="mb-[18px] flex h-[42px] w-[42px] items-center justify-center rounded-[12px] border border-white/[0.12] bg-[linear-gradient(135deg,rgba(79,163,232,0.2),rgba(110,124,232,0.2))]">
-                <Icon className="h-[22px] w-[22px] text-[#4FA3E8]" strokeWidth={1.6} />
+              <div className="mb-[18px] flex h-[42px] w-[42px] items-center justify-center rounded-[12px] border border-slate-200 bg-gradient-to-br from-blue-500/10 to-indigo-500/10">
+                <Icon className="h-[22px] w-[22px] text-blue-600" strokeWidth={1.6} />
               </div>
-              <h3 className="mb-2.5 text-[19px] font-semibold text-white">{name}</h3>
-              <p className="text-[15px] leading-[1.7] text-[#94A3B8]">{body}</p>
+              <h3 className="mb-2.5 text-[19px] font-semibold text-slate-900">{name}</h3>
+              <p className="text-[15px] leading-[1.7] text-slate-500">{body}</p>
               <div className="mt-auto pt-5">
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.06] px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[#E2E8F0]">
+                <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-slate-700">
                   <span className={`h-[7px] w-[7px] rounded-full ${dot[status]}`} />
                   {status}
                 </span>
