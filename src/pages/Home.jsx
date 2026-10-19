@@ -7,6 +7,7 @@ import Forensic from "@/components/hackwatch/Forensic";
 import Protection from "@/components/hackwatch/Protection";
 import Coverage from "@/components/hackwatch/Coverage";
 import Booking from "@/components/hackwatch/Booking";
+import Founders from "@/components/hackwatch/Founders";
 import Footer from "@/components/hackwatch/Footer";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <Protection />
       <div className="mt-10 h-[120px] bg-[linear-gradient(180deg,transparent,rgba(99,102,241,0.06),transparent)]" />
       <Coverage />
+      <Founders />
       <Booking />
       <Footer />
     </div>
