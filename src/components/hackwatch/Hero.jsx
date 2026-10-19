@@ -19,7 +19,7 @@ export default function Hero() {
           <span className="inline-block bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: "0.6s" }}>fixes.</span>
         </h1>
         <p className="mx-auto mt-7 max-w-[560px] text-base leading-[1.7] text-slate-500 animate-[hw-up_0.8s_0.6s_ease_both] sm:text-[17px]">
-          HackWatch connects runtime attack evidence to the exact vulnerable code, then proposes a reviewable fix through your existing workflow. No longer just Laravel and Nginx. Bring your own network.
+          HackWatch connects runtime attack evidence to the exact vulnerable code, then proposes a reviewable fix through your existing workflow.
         </p>
         <div className="mt-10 inline-flex items-center gap-7 rounded-[20px] border border-slate-200 bg-white px-5 py-4 shadow-[0_10px_40px_rgba(59,130,246,0.1)] animate-[hw-up_0.8s_0.8s_ease_both]">
           <a href="#demo" className="hw-focus cursor-pointer rounded-[14px] bg-gradient-to-br from-blue-500 to-indigo-500 px-[26px] py-[13px] text-[15px] font-semibold text-white transition-shadow hover:shadow-[0_0_28px_rgba(59,130,246,0.55)] active:opacity-85">Book a demo →</a>
