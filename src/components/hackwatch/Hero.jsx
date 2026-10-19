@@ -5,7 +5,7 @@ const words = ["From", "live", "attacks", "to"];
 
 export default function Hero() {
   return (
-    <section id="top" className="relative z-10 px-10 pt-[90px] text-center">
+    <section id="top" className="relative z-10 px-10 pt-[40px] text-center">
       <div className="mx-auto max-w-[1100px]">
         <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white px-[18px] py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 shadow-sm animate-[hw-up_0.8s_ease_both]">
           <span className="h-[7px] w-[7px] rounded-full bg-blue-500 shadow-[0_0_10px_#3B82F6]" />
