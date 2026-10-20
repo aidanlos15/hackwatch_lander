@@ -11,7 +11,7 @@ export default function Founders() {
     <section id="founders" aria-labelledby="founders-heading" className="relative z-10 px-6 pt-24 md:px-10">
       <div className="mx-auto max-w-[1100px]">
         <h2 id="founders-heading" className="text-center font-heading text-3xl font-semibold tracking-tight text-foreground md:text-[38px]">Meet the founders</h2>
-        <div className="mx-auto mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-[920px] grid-cols-1 gap-8 sm:grid-cols-2">
           {founders.map((founder) => (
             <article key={founder.name} className="text-center">
               <div className="aspect-square w-full overflow-hidden border border-border bg-card shadow-sm">
