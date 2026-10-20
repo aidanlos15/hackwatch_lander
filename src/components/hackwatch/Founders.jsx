@@ -11,10 +11,10 @@ export default function Founders() {
     <section id="founders" aria-labelledby="founders-heading" className="relative z-10 px-6 pt-24 md:px-10">
       <div className="mx-auto max-w-[1100px]">
         <h2 id="founders-heading" className="text-center font-heading text-3xl font-semibold tracking-tight text-foreground md:text-[38px]">Meet the founders</h2>
-        <div className="mx-auto mt-12 grid max-w-[720px] grid-cols-1 gap-0 sm:grid-cols-2">
+        <div className="mx-auto mt-12 grid grid-cols-1 gap-0 sm:grid-cols-2">
           {founders.map((founder) => (
             <article key={founder.name} className="text-center">
-              <div className="aspect-square w-full overflow-hidden border border-border bg-card shadow-sm">
+              <div className="mx-auto aspect-square w-full max-w-[360px] overflow-hidden border border-border bg-card shadow-sm">
                 <Image src={founder.image} alt={founder.name} fittingType="fill" className="h-full w-full" />
               </div>
               <h3 className="mt-7 font-heading text-2xl font-semibold tracking-tight text-foreground md:text-3xl">{founder.name}</h3>
