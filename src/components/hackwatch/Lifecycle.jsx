@@ -3,9 +3,9 @@ import React from "react";
 const glass = "bg-white border border-slate-200 rounded-[24px] shadow-[0_10px_36px_rgba(15,23,42,0.08)] backdrop-blur-[16px] transition hover:shadow-[0_14px_44px_rgba(37,99,235,0.15)] hover:border-blue-300";
 
 const steps = [
-  ["01", "Detect the attack", "Monitor supported application traffic, flag suspicious inputs and group related attempts into one investigation."],
-  ["02", "Trace the vulnerable code", "Connect the request to candidate handlers in your repository, then trace input toward a sensitive operation."],
-  ["03", "Validate a fix. Keep control.", "When policy and budget allow, analyse and validate a proposed fix. Only valid proposals reach review, and people approve the PR."],
+  ["01", "Spot suspicious activity", "Watch for signs of an attack and group related activity together."],
+  ["02", "Find the weak spot", "Trace the suspicious activity to the code that may be at risk."],
+  ["03", "Review a possible fix", "When enabled, HackWatch checks a suggested fix. You review and approve it before it’s applied."],
 ];
 
 export default function Lifecycle() {
