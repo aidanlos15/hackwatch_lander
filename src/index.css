@@ -6,14 +6,11 @@
 
 html { scroll-behavior: smooth; }
 
-@keyframes hw-orbit-clockwise { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes hw-orbit-upright { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
-.hw-orbit-window { position: relative; width: 100%; max-width: 760px; aspect-ratio: 2 / 1; overflow: hidden; }
-.hw-orbit-track { position: absolute; inset: 14% 8% auto; aspect-ratio: 1; }
-.hw-orbit-inner { inset: 32% 17% auto; }
-.hw-orbit-spoke { position: absolute; left: 8%; top: 14%; width: 84%; aspect-ratio: 1; animation: hw-orbit-clockwise 30s linear infinite; pointer-events: none; }
-.hw-orbit-logo { position: absolute; left: -5.5%; top: 44.5%; width: 11%; aspect-ratio: 1; animation: hw-orbit-upright 30s linear infinite; }
-@media (prefers-reduced-motion: reduce) { .hw-orbit-spoke, .hw-orbit-logo { animation-play-state: paused; } }
+.hw-integration-arc { position: relative; width: 100%; max-width: 760px; height: clamp(145px, 17vw, 200px); margin-top: 12px; }
+.hw-integration-item { position: absolute; transform: translateX(-50%); text-align: center; transition: transform 450ms ease, opacity 450ms ease; opacity: 0.55; }
+.hw-integration-mark { width: clamp(44px, 6vw, 70px); height: clamp(44px, 6vw, 70px); margin: auto; }
+.hw-integration-active { transform: translateX(-50%) scale(1.25); opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .hw-integration-item { transition: none; } }
 
 @keyframes hw-d1 { from { transform: translate(0,0); } to { transform: translate(120px,80px); } }
 @keyframes hw-d2 { from { transform: translate(0,0); } to { transform: translate(-100px,60px); } }
