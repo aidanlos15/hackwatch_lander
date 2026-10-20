@@ -18,7 +18,7 @@ export default function Founders() {
                 <Image src={founder.image} alt={founder.name} fittingType="fit" className={founder.region === "North America" ? "h-full w-full scale-[0.9]" : "h-full w-full"} />
               </div>
               <h3 className="mt-7 font-heading text-2xl font-semibold tracking-tight text-foreground md:text-3xl">{founder.name}</h3>
-              <p className="mt-3 font-mono text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">{founder.title}</p>
+              <p className="mt-3 bg-gradient-to-br from-blue-500 to-indigo-500 bg-clip-text font-mono text-xs font-medium uppercase tracking-[0.16em] text-transparent">{founder.title}</p>
             </article>
           ))}
         </div>
