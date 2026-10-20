@@ -3,14 +3,9 @@ import React from "react";
 const glass = "bg-white border border-slate-200 rounded-[24px] shadow-[0_10px_36px_rgba(15,23,42,0.08)] backdrop-blur-[16px] transition hover:shadow-[0_14px_44px_rgba(37,99,235,0.15)] hover:border-blue-300";
 
 const steps = [
-  ["01", "Observe", "Read supported logs or a bounded HTTP observation, configured per application."],
-  ["02", "Detect", "Deterministic rules flag suspicious inputs. A signature is a trigger, not proof."],
-  ["03", "Correlate", "Group related requests and count attempts without a new investigation per payload."],
-  ["04", "Resolve source", "Map method and route to candidate handlers in the assigned repository."],
-  ["05", "Confirm flow", "Trace request-controlled input toward a sensitive sink."],
-  ["06", "Gate AI", "Check vulnerability identity, cooldown, policy and daily budget."],
-  ["07", "Analyse & validate", "Optional structured fix, locally validated and semantically reviewed."],
-  ["08", "Publish & review", "A proposal appears only when a valid one exists. People approve the PR."],
+  ["01", "Detect the attack", "Monitor supported application traffic, flag suspicious inputs and group related attempts into one investigation."],
+  ["02", "Trace the vulnerable code", "Connect the request to candidate handlers in your repository, then trace input toward a sensitive operation."],
+  ["03", "Validate a fix. Keep control.", "When policy and budget allow, analyse and validate a proposed fix. Only valid proposals reach review, and people approve the PR."],
 ];
 
 export default function Lifecycle() {
@@ -21,7 +16,7 @@ export default function Lifecycle() {
           <span className="font-mono text-[13px] text-blue-600">02</span>
           <h2 className="text-3xl font-semibold tracking-[-0.01em] text-slate-900 md:text-[38px]">Find the code, not just the URL.</h2>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {steps.map(([num, t, d]) => (
             <div key={num} className={`${glass} flex gap-[18px] p-6`}>
               <span className="pt-[3px] font-mono text-[13px] text-indigo-500">{num}</span>
