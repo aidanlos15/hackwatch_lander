@@ -5,7 +5,6 @@ import DashboardPreview from "@/components/hackwatch/DashboardPreview";
 import Networks from "@/components/hackwatch/Networks";
 import Lifecycle from "@/components/hackwatch/Lifecycle";
 import Forensic from "@/components/hackwatch/Forensic";
-import Protection from "@/components/hackwatch/Protection";
 import Coverage from "@/components/hackwatch/Coverage";
 import Booking from "@/components/hackwatch/Booking";
 import Founders from "@/components/hackwatch/Founders";
@@ -27,7 +26,6 @@ export default function Home() {
       <div className="h-[120px] bg-[linear-gradient(180deg,transparent,rgba(99,102,241,0.06),transparent)]" />
       <Lifecycle />
       <Forensic />
-      <Protection />
       <div className="mt-10 h-[120px] bg-[linear-gradient(180deg,transparent,rgba(99,102,241,0.06),transparent)]" />
       <Coverage />
       <Founders />

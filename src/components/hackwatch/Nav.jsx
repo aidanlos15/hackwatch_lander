@@ -3,7 +3,6 @@ import React from "react";
 const links = [
   ["Networks", "#networks"],
   ["Lifecycle", "#lifecycle"],
-  ["Protection", "#protection"],
   ["Coverage", "#coverage"],
 ];
 
