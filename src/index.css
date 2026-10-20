@@ -6,6 +6,15 @@
 
 html { scroll-behavior: smooth; }
 
+@keyframes hw-orbit-clockwise { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes hw-orbit-upright { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+.hw-orbit-window { position: relative; width: 100%; max-width: 760px; aspect-ratio: 2 / 1; overflow: hidden; }
+.hw-orbit-track { position: absolute; inset: 14% 8% auto; aspect-ratio: 1; }
+.hw-orbit-inner { inset: 32% 17% auto; }
+.hw-orbit-spoke { position: absolute; left: 8%; top: 14%; width: 84%; aspect-ratio: 1; animation: hw-orbit-clockwise 30s linear infinite; pointer-events: none; }
+.hw-orbit-logo { position: absolute; left: -5.5%; top: 44.5%; width: 11%; aspect-ratio: 1; animation: hw-orbit-upright 30s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .hw-orbit-spoke, .hw-orbit-logo { animation-play-state: paused; } }
+
 @keyframes hw-d1 { from { transform: translate(0,0); } to { transform: translate(120px,80px); } }
 @keyframes hw-d2 { from { transform: translate(0,0); } to { transform: translate(-100px,60px); } }
 @keyframes hw-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
