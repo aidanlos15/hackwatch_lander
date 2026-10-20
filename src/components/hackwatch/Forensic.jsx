@@ -12,7 +12,7 @@ const specs = [
 
 export default function Forensic() {
   return (
-    <section className="relative z-10 px-10 pt-[96px]">
+    <section className="hidden">
       <div className="mx-auto max-w-[1100px]">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="relative overflow-hidden rounded-[24px] border border-slate-200 shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
