@@ -1,4 +1,5 @@
 import React from "react";
+import CodeFixExample from "@/components/hackwatch/CodeFixExample";
 
 const glass = "bg-white border border-slate-200 rounded-[24px] shadow-[0_10px_36px_rgba(15,23,42,0.08)] backdrop-blur-[16px] transition hover:shadow-[0_14px_44px_rgba(37,99,235,0.15)] hover:border-blue-300";
 
@@ -27,6 +28,7 @@ export default function Lifecycle() {
             </div>
           ))}
         </div>
+        <CodeFixExample />
       </div>
     </section>
   );
