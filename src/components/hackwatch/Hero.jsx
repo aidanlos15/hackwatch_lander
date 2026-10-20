@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "@/components/ui/image";
 
 const words = ["From", "live", "attacks", "to"];
 
@@ -25,9 +24,7 @@ export default function Hero() {
           <a href="#demo" className="hw-focus cursor-pointer rounded-[14px] bg-gradient-to-br from-blue-500 to-indigo-500 px-[26px] py-[13px] text-[15px] font-semibold text-white transition-shadow hover:shadow-[0_0_28px_rgba(59,130,246,0.55)] active:opacity-85">Book a demo →</a>
           <a href="#lifecycle" className="hw-focus cursor-pointer text-[15px] text-slate-600 transition-colors hover:text-blue-600">How it works</a>
         </div>
-        <div className="mx-auto mt-[70px] w-[980px] max-w-full animate-[hw-up_1s_1s_ease_both]">
-          <Image src="https://media.base44.com/images/public/6ad1475af0db89ea8a403727/28164100b_generated_6c263ef0.jpg" alt="Product dashboard mockup" fittingType="fill" className="block aspect-[16/9] w-full rounded-[24px] border border-slate-200 object-cover shadow-[0_30px_80px_rgba(15,23,42,0.18)]" />
-        </div>
+
       </div>
     </section>
   );

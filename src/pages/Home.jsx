@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "@/components/hackwatch/Nav";
 import Hero from "@/components/hackwatch/Hero";
+import DashboardPreview from "@/components/hackwatch/DashboardPreview";
 import Networks from "@/components/hackwatch/Networks";
 import Lifecycle from "@/components/hackwatch/Lifecycle";
 import Forensic from "@/components/hackwatch/Forensic";
@@ -21,6 +22,7 @@ export default function Home() {
       </div>
       <Nav />
       <Hero />
+      <DashboardPreview />
       <Networks />
       <div className="h-[120px] bg-[linear-gradient(180deg,transparent,rgba(99,102,241,0.06),transparent)]" />
       <Lifecycle />
