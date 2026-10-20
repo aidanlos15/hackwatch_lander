@@ -27,7 +27,6 @@ export default function Lifecycle() {
             </div>
           ))}
         </div>
-        <p className="mt-7 rounded-[16px] border-l-2 border-blue-500 bg-slate-50 px-6 py-[18px] text-[14px] leading-[1.7] text-slate-500">Static confirmation is supported evidence, not proof an exploit succeeded. "No finding" is not proof an application is secure.</p>
       </div>
     </section>
   );
