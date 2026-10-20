@@ -15,7 +15,16 @@ export default function CodeFixExample() {
           <div key={label} className="min-w-0">
             <h4 className="font-heading text-base font-semibold text-foreground">{label}</h4>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{note}</p>
-            <pre className="mt-4 overflow-x-auto rounded-xl border border-border bg-muted p-4 text-xs leading-6 text-foreground" tabIndex={0} aria-label={`${label} sample code`}><code className="font-mono">{code}</code></pre>
+            <div className="mt-4 overflow-hidden rounded-xl border border-code-border bg-code text-code-foreground">
+              <div className="flex items-center gap-2 border-b border-code-border px-4 py-3">
+                <span aria-hidden="true" className="flex gap-1.5"><span className="h-2 w-2 rounded-full bg-code-muted" /><span className="h-2 w-2 rounded-full bg-code-muted" /><span className="h-2 w-2 rounded-full bg-code-muted" /></span>
+                <span className="ml-2 font-mono text-xs text-code-muted">users.js</span>
+              </div>
+              <pre className="overflow-x-auto py-4 text-xs leading-7" tabIndex={0} aria-label={`${label} sample code`}><code className="block min-w-max font-mono">{code.split("\n").map((line, index) => {
+                const highlighted = label === "Before" ? index === 3 : index === 3 || index === 4;
+                return <span key={index} className={`flex border-l-2 pr-4 ${highlighted ? label === "Before" ? "border-code-removed text-code-removed bg-code-removed/15" : "border-code-added text-code-added bg-code-added/15" : "border-transparent"}`}><span aria-hidden="true" className="w-10 shrink-0 select-none pr-3 text-right text-code-muted">{index + 1}</span><span className="whitespace-pre">{line || " "}</span></span>;
+              })}</code></pre>
+            </div>
           </div>
         ))}
       </div>

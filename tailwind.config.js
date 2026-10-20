@@ -11,6 +11,14 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+        code: {
+          DEFAULT: 'hsl(var(--code) / <alpha-value>)',
+          foreground: 'hsl(var(--code-foreground) / <alpha-value>)',
+          muted: 'hsl(var(--code-muted) / <alpha-value>)',
+          border: 'hsl(var(--code-border) / <alpha-value>)',
+          removed: 'hsl(var(--code-removed) / <alpha-value>)',
+          added: 'hsl(var(--code-added) / <alpha-value>)'
+        },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
