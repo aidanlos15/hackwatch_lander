@@ -6,10 +6,6 @@ export default function Hero() {
   return (
     <section id="top" className="relative z-10 px-10 pt-[40px] text-center">
       <div className="mx-auto max-w-[1100px]">
-        <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white px-[18px] py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 shadow-sm animate-[hw-up_0.8s_ease_both]">
-          <span className="h-[7px] w-[7px] rounded-full bg-blue-500 shadow-[0_0_10px_#3B82F6]" />
-          Network observability · any stack
-        </div>
         <h1 className="mx-auto mt-8 max-w-[860px] text-[40px] font-semibold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-6xl md:text-[72px]">
           {words.map((w, i) => (
             <span key={w} className="inline-block animate-[hw-up_0.8s_ease_both]" style={{ animationDelay: `${0.1 + i * 0.1}s` }}>{w}{"\u00a0"}</span>
