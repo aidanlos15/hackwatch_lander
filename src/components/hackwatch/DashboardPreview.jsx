@@ -191,7 +191,6 @@ export default function DashboardPreview() {
           <div aria-live="polite" role="status">{toast && <div className="dp-toast">{toast}</div>}</div>
         </div>
       </div>
-      <div className="mt-5 flex items-center justify-center gap-6"><a href="#demo" className="hw-focus rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground">Book a pilot</a><button className="hw-focus text-xs text-muted-foreground underline underline-offset-4" onClick={reset}>Reset demo</button></div>
     </section>
   );
 }
