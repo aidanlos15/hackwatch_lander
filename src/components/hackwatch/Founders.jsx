@@ -10,7 +10,10 @@ export default function Founders() {
   return (
     <section id="founders" aria-labelledby="founders-heading" className="relative z-10 px-6 pt-24 md:px-10">
       <div className="mx-auto max-w-[1100px]">
-        <h2 id="founders-heading" className="text-center font-heading text-3xl font-semibold tracking-tight text-foreground md:text-[38px]">Meet the founders</h2>
+        <div className="flex items-baseline gap-4">
+          <span className="font-mono text-[13px] text-blue-600">05</span>
+          <h2 id="founders-heading" className="font-heading text-3xl font-semibold tracking-[-0.01em] text-foreground md:text-[38px]">Meet the founders</h2>
+        </div>
         <div className="mx-auto mt-12 grid grid-cols-1 gap-0 sm:grid-cols-2">
           {founders.map((founder) => (
             <article key={founder.name} className="text-center">
